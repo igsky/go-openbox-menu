@@ -47,11 +47,13 @@ func (i *Item) SetIcon(path string) {
 
 //PrintOut prints Item and all of its contains to stdout
 func (i Item) PrintOut() {
-	fmt.Println("<Item label=\"", i.Label, "\">")
+	fmt.Print("<item label=\"")
+	fmt.Print(i.Label)
+	fmt.Println("\">")
 	for _, v := range i.Actions {
 		v.PrintOut()
 	}
-	fmt.Println("</Item>")
+	fmt.Println("</item>")
 	return
 }
 
