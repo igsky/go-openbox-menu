@@ -71,9 +71,9 @@ type Action struct {
 
 //PrintOut prints Action and all of its contains to stdout
 func (a Action) PrintOut() {
-	fmt.Print("<Action name=\"")
+	fmt.Print("<action name=\"")
 	fmt.Print(a.Name)
-	fmt.Println("\"></Action>")
+	fmt.Println("\"></action>")
 }
 
 func (a Action) isAction() {
@@ -86,11 +86,11 @@ type ActionExecute struct {
 
 //PrintOut prints Action and all of its contains to stdout
 func (a ActionExecute) PrintOut() {
-	fmt.Println("<Action name=\"Execute\">")
+	fmt.Println("<action name=\"Execute\">")
 	fmt.Print("<command>")
 	fmt.Print(a.Command)
 	fmt.Println("</command>")
-	fmt.Println("</Action>")
+	fmt.Println("</action>")
 }
 
 func (a ActionExecute) isAction() {
